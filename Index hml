@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant Workspace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>AI Productivity Assistant</h1>
+            <p>Your smart workplace companion</p>
+        </header>
+
+        <nav class="feature-tabs">
+            <button class="tab-btn active" onclick="switchFeature('email')">Email Gen</button>
+            <button class="tab-btn" onclick="switchFeature('notes')">Meeting Notes</button>
+            <button class="tab-btn" onclick="switchFeature('tasks')">Task Planner</button>
+            <button class="tab-btn" onclick="switchFeature('research')">Research</button>
+            <button class="tab-btn" onclick="switchFeature('chatbot')">AI Chat</button>
+        </nav>
+
+        <main class="workspace">
+            <div id="feature-title-area">
+                <h2 id="current-feature-title">Smart Email Generator</h2>
+                <p id="current-feature-desc">Generate professional workplace emails in different communication tones.</p>
+            </div>
+
+            <div class="input-area">
+                <textarea id="user-input" placeholder="Enter your prompt, notes, or topic here..."></textarea>
+                
+                <div class="controls">
+                    <select id="tone-select">
+                        <option value="professional">Professional</option>
+                        <option value="friendly">Friendly</option>
+                        <option value="persuasive">Persuasive</option>
+                    </select>
+                    <button id="generate-btn" onclick="handleAIRequest()">Generate Output</button>
+                </div>
+            </div>
+
+            <div class="output-area">
+                <h3>AI Response:</h3>
+                <div id="ai-output" class="output-box">Your generated content will appear here...</div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Designed responsibly with AI guidelines.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
